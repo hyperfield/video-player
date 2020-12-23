@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример подключения плеера</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./fontawesome/css/fontawesome.min.css">
+  <style type="text/css">
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      height: 95%;
+      width: 95%;
+    }
+    
+    button {
+      border-style: none;
+      background-color: transparent;
+    }
+
+    .player {
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 95%;
+      height: 95%;
+    }
+
+    .js-video-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .lower {
+      background-color:black;
+      display: flex;
+      flex-direction: row;
+      float: left;
+    }
+
+    .button {
+      color: white;
+      font-size: large;
+      line-height: 1.5;
+      padding-right: 10px;
+    }
+
+    .space-between-buttons {
+      display: flex;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="player" id="player">
+    <div class="js-video-container"></div>
+    <div class="lower">
+      <button class="js-play-button">
+        <div class="button"><i class="fa fa-play" area-hidden="true"></i></div>
+      </button>
+      <button class="js-pause-button" hidden>
+        <div class="button"><i class="fa fa-pause" area-hidden="true"></i></div>
+      </button>
+      <button class="js-volume-button">
+        <div class="button"><i class="fa fa-volume-off" area-hidden="true"></i></div>
+      </button>
+      <button class="js-mute-button">
+        <div class="button"><i class="fa fa-volume-up" area-hidden="true"></i></div>
+      </button>
+      <div class="space-between-buttons"></div>
+      <button class="js-fullscreen-button">
+        <div class="button"><i class="fa fa-arrows-alt" area-hidden="true"></i></div>
+      </button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="player.js"></script>
+  <script type="text/javascript">
+    createPlayer({elementId: 'player'});
+  </script>
+  <script src="https://use.fontawesome.com/7cedd502d9.js"></script>
+
+</body>
+</html>
