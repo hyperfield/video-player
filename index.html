@@ -4,6 +4,18 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./fontawesome/css/fontawesome.min.css">
+
+  <!--Favicon section begin-->
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!--Favicon section end-->
+
+
   <style type="text/css">
     html {
       height: 100%;
@@ -15,7 +27,7 @@
       width: 95%;
     }
     
-    button {
+    .player-control-button {
       border-style: none;
       background-color: transparent;
     }
@@ -30,27 +42,27 @@
       height: 95%;
     }
 
-    .js-video-container {
+    .video-container {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
-    .lower {
+    .player-button-stripe {
       background-color:black;
       display: flex;
       flex-direction: row;
       float: left;
     }
 
-    .button {
+    .player-inner-button {
       color: white;
       font-size: large;
       line-height: 1.5;
       padding-right: 10px;
     }
 
-    .space-between-buttons {
+    .player-button-divider {
       display: flex;
       flex-grow: 1;
     }
@@ -58,23 +70,23 @@
 </head>
 <body>
   <div class="player" id="player">
-    <div class="js-video-container"></div>
-    <div class="lower">
-      <button class="js-play-button">
-        <div class="button"><i class="fa fa-play" area-hidden="true"></i></div>
+    <div class="js-video-container video-container"></div>
+    <div class="player-button-stripe">
+      <button class="js-play-button player-control-button" class>
+        <div class="player-inner-button"><i class="fa fa-play" area-hidden="true"></i></div>
       </button>
-      <button class="js-pause-button" hidden>
-        <div class="button"><i class="fa fa-pause" area-hidden="true"></i></div>
+      <button class="js-pause-button player-control-button" hidden>
+        <div class="player-inner-button"><i class="fa fa-pause" area-hidden="true"></i></div>
       </button>
-      <button class="js-volume-button">
-        <div class="button"><i class="fa fa-volume-off" area-hidden="true"></i></div>
+      <button class="js-volume-button player-control-button">
+        <div class="player-inner-button"><i class="fa fa-volume-off" area-hidden="true"></i></div>
       </button>
-      <button class="js-mute-button">
-        <div class="button"><i class="fa fa-volume-up" area-hidden="true"></i></div>
+      <button class="js-mute-button player-control-button">
+        <div class="player-inner-button"><i class="fa fa-volume-up" area-hidden="true"></i></div>
       </button>
-      <div class="space-between-buttons"></div>
-      <button class="js-fullscreen-button">
-        <div class="button"><i class="fa fa-arrows-alt" area-hidden="true"></i></div>
+      <div class="player-button-divider"></div>
+      <button class="js-fullscreen-button player-control-button">
+        <div class="player-inner-button"><i class="fa fa-arrows-alt" area-hidden="true"></i></div>
       </button>
     </div>
   </div>
