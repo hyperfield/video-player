@@ -7,7 +7,7 @@ The purpose is to demonstrate some of the capabilities of the JS library whose c
 Video Player can be seen in action at https://hyperfield.github.io/video-player/
 <br/><br/>
 
-![What the player looks like](player_screenshot.png)
+![What the player looks like](player-screenshot.png)
 
 ## Installing and launching the player
 
